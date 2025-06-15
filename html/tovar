@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylecss.css">
+    <title>FLORASHOP - цветочный магазин</title>
+    </style>
+</head>
+<body>
+    <div class="header" id="header"><a href="site.html">flora</a>
+        <div class="header-image"></div>
+        <div class="search-container">
+            <img src="poisk.png" alt="Поиск" class="search-icon">
+            <input type="text" class="search-input" placeholder="Поиск...">
+        </div>
+        <div class="login">
+           <label for="sidebarToggle" style="cursor: pointer;">
+            <img src="lichnyi_kabinet.png" alt="Личный кабинет" class="login-icon"></label></a> 
+       </div>
+    </div>
+    <input type="checkbox" id="sidebarToggle">
+    <div class="sidebar">
+        <ul>
+            <li><a href="registrat.html">Зарегистрироваться</a></li>
+            <li><a href="#">Войти</a></li>
+            <li><a href="#">Корзина</a></li>
+            <li><a href="#">Избранное</a></li>
+            <li><a href="#">Мои заказы</a></li>
+            <li><a href="#">Уведомления</a></li>
+            <li><a href="#">Поддержка</a></li>
+            <li><img src="Telegram_icon.png" style="cursor: pointer;" alt="Telegram" class="telegram-icon">
+            <img src="WhatsApp_icon.png" style="cursor: pointer;" alt="WhatsApp" class="whatsapp-icon">
+            <img src="VK_icon.png" style="cursor: pointer;" alt="VK" class="vk-icon"></li>
+        </ul>
+    </div>
+    <div id="nav">
+        <a href="o-nas.html" class="button">О нас</a>
+        <button target="content">Обзоры</button>
+        <a href="site.html" class="button">Главная</a>
+        <a href="katalog.html" class="button">Каталог</a>
+        <button target="content">Отзывы</button>
+    </div>
+    <a href="site.html"><img src="back_icon.png" alt="назад" class="icon-back"></a>
+    <div class="container-2">
+        <div class="slider-container">
+            <div class="slider-track">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <div class="slides">
+                    <img src="tovar2.jpg" alt="Image 1" class="slide">
+                    <img src="tovar1.png" alt="Image 2" class="slide">
+                    <img src="tovar3.png" alt="Image 3" class="slide">
+                </div>
+                <div class="navigation">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <b>«Нежность рассвета»</b>
+            <br><br>Букет наполнен утренней свежестью пастельных оттенков 
+            и символизирует начало нового дня. Яркие  
+            розовые и кремовые цветы в окружении зелени  
+            создают гармонию и уют. Идеально подходит для  
+            подарка на особый случай или чтобы порадовать 
+            любимого человека без повода.
+            <div class="icons-tovars">
+                <div class="icons-tovar1">
+                    <img src="minus_icon.png" style="cursor: pointer;" alt="меньше">1
+                    <img src="plus_icon.png" style="cursor: pointer;" alt="больше">
+                </div>
+                <div class="icons-tovar2">
+                    <img src="heart_icon.png"  style="cursor: pointer;" alt="нравится">
+                    <img src="korzina_icon.png" style="cursor: pointer;" alt="в корзину">
+                </div>
+                <div class="icons-tovar3">
+                    <img src="share_icon.png"  style="cursor: pointer;" alt="поделиться">
+                </div>
+                <a href="#">Отзывы<sup>3567</sup></a>
+                <div class="icons-tovar4">
+                    <img src="stars_icon.png" alt="рейтинг">
+                </div>
+                <button class="buy-button"><u>Купить</u></button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="contact">
+            <div class="icons">
+                <img src="Telegram_icon.png" style="cursor: pointer;" alt="Telegram" class="telegram-icon">
+                <img src="WhatsApp_icon.png" style="cursor: pointer;" alt="WhatsApp" class="whatsapp-icon">
+                <img src="VK_icon.png" style="cursor: pointer;" alt="VK" class="vk-icon">
+            </div>
+            <div class="number">
+                <br><a href="#">+7-812-111-11-11</a>
+                <br><a href="#">florashopspb@mail.ru</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.querySelector('.sidebar');
+    document.addEventListener('click', function(event) {
+        if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+            sidebarToggle.checked = false;
+        }
+    });
+</script>
+</html>
