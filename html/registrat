@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylecss.css">
+    <title>FLORASHOP - цветочный магазин</title>
+    <style>
+        .forma {
+            background: url('background_registrat.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="forma">
+        <div class="form-container">
+            <form>
+                <a>Регистрация</a>
+                <input class="pole" type="text" name="pole1" id="lettersInput" maxlength="30" placeholder="Имя и фамилия">
+                <br><input class="pole" type="text" name="pole2" minlength="5" maxlength="35" placeholder="E-mail">
+                <br><input class="pole" type="text" name="pole3" minlength="10" maxlength="12" id="number" value="+7" placeholder="+7 (XXX) XXX-XX-XX">
+                <br><input class="pole" type="password" name="pole4" maxlength="15" minlength="10" placeholder="Придумайте пароль">
+                <br>
+                <div class="agreement">
+                    <label for="check1">
+                        <input type="checkbox" name="check1"> 
+                        Получать новости и информацию об обновлениях
+                    </label>
+                    <br>
+                    <label for="check2">
+                        <input type="checkbox" name="check2"> 
+                        Я соглашаюсь на использование и обработку
+                        своих персональных данных в соответствии с
+                        <a href="https://yandex.ru/legal/confidential/?ysclid=m6s3xnivwz92055558">
+                        <u>Политикой конфиденциальности</u></a>
+                        </label>
+                </div>
+                <br><button class="registrat-btn">Зарегистрироваться</button> 
+                <br><div class="vhod">Уже есть аккаунт? <a href="#"><u>Войти</u></a></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const phoneInput = document.getElementById('number');
+    
+    // Инициализация - добавляем +7 если его нет
+    if (!phoneInput.value.startsWith('+7')) {
+        phoneInput.value = '+7';
+    }
+
+    // Обработка ввода
+    phoneInput.addEventListener('input', function(e) {
+        // Сохраняем позицию курсора
+        const cursorPosition = phoneInput.selectionStart;
+        
+        // Удаляем все, кроме цифр и + в начале
+        let cleanedValue = this.value.replace(/[^\d+]/g, '');
+        
+        // Оставляем только + в начале, если он есть
+        if (cleanedValue.startsWith('+')) {
+            cleanedValue = '+' + cleanedValue.substring(1).replace(/\D/g, '');
+        } else {
+            cleanedValue = cleanedValue.replace(/\D/g, '');
+        }
+        
+        // Добавляем +7 если его нет
+        if (!cleanedValue.startsWith('+7')) {
+            cleanedValue = '+7' + cleanedValue.replace(/^\+?7?/, '');
+        }
+        
+        // Ограничиваем длину (11 цифр: +7 и еще 10)
+        if (cleanedValue.length > 12) { // +7 и 10 цифр
+            cleanedValue = cleanedValue.substring(0, 12);
+        }
+        
+        // Устанавливаем новое значение
+        this.value = cleanedValue;
+        
+        // Восстанавливаем позицию курсора, с корректировкой
+        const newCursorPosition = Math.max(2, cursorPosition - (this.value.length - cleanedValue.length));
+        phoneInput.setSelectionRange(newCursorPosition, newCursorPosition);
+    });
+
+    // Запрещаем удаление +7
+    phoneInput.addEventListener('keydown', function(e) {
+        // Если курсор перед +7 или выделена часть +7
+        if (this.selectionStart < 2 && 
+            (e.key === 'Backspace' || e.key === 'Delete' || 
+             (e.key.length === 1 && !e.ctrlKey && !e.metaKey))) {
+            e.preventDefault();
+        }
+    });
+
+    // Форматирование при потере фокуса
+    phoneInput.addEventListener('blur', function() {
+        const digits = this.value.substring(2).replace(/\D/g, '');
+        let formatted = '+7';
+        
+        if (digits.length > 0) {
+            formatted += ' (' + digits.substring(0, 3);
+            
+            if (digits.length > 3) {
+                formatted += ') ' + digits.substring(3, 6);
+                
+                if (digits.length > 6) {
+                    formatted += '-' + digits.substring(6, 8);
+                    
+                    if (digits.length > 8) {
+                        formatted += '-' + digits.substring(8, 10);
+                    }
+                }
+            }
+        }
+        
+        this.value = formatted;
+    });
+
+    // Убираем форматирование при получении фокуса
+    phoneInput.addEventListener('focus', function() {
+        this.value = '+7' + this.value.substring(2).replace(/\D/g, '');
+    });
+});
+</script>
