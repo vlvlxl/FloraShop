@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylecss.css">
+    <title>FLORASHOP - цветочный магазин</title>
+    </style>
+</head>
+<body>
+    <div class="header" id="header"><a href="site.html">flora</a>
+        <div class="header-image"></div>
+        <div class="search-container">
+            <img src="poisk.png" alt="Поиск" class="search-icon">
+            <input type="text" class="search-input" placeholder="Поиск...">
+        </div>
+        <div class="login">
+           <label for="sidebarToggle" style="cursor: pointer;">
+            <img src="lichnyi_kabinet.png" alt="Личный кабинет" class="login-icon"></label></a> 
+       </div>
+    </div>
+    <input type="checkbox" id="sidebarToggle">
+    <div class="sidebar">
+        <ul>
+            <li><a href="registrat.html">Зарегистрироваться</a></li>
+            <li><a href="#">Войти</a></li>
+            <li><a href="#">Корзина</a></li>
+            <li><a href="#">Избранное</a></li>
+            <li><a href="#">Мои заказы</a></li>
+            <li><a href="#">Уведомления</a></li>
+            <li><a href="#">Поддержка</a></li>
+            <li><img src="Telegram_icon.png" style="cursor: pointer;" alt="Telegram" class="telegram-icon">
+            <img src="WhatsApp_icon.png" style="cursor: pointer;" alt="WhatsApp" class="whatsapp-icon">
+            <img src="VK_icon.png" style="cursor: pointer;" alt="VK" class="vk-icon"></li>
+        </ul>
+    </div>
+    <div id="nav">
+        <a href="o-nas.html" class="button">О нас</a>
+        <button target="content">Обзоры</button>
+        <a href="site.html" class="button">Главная</a>
+        <a href="katalog.html" class="button">Каталог</a>
+        <button target="content">Отзывы</button>
+    </div>
+    <div id="container-3">
+        <section>
+            <div class="section-content-3">
+                <a>О нас</a>
+                <div class="content-wrapper">
+                    <div class="item">
+                        <img src="flowers1.png" alt="Описание изображения 1" class="photo">
+                        <p class="text">
+                            <a1><b>Flora: Больше, чем просто цветы. Это эмоции в каждом бутоне.</b></a1>
+                            <br><br>В современном мире, где время ценится на вес золота, а расстояния больше не преграда 
+                            для теплых чувств, родился Flora – онлайн-магазин, призванный дарить яркие эмоции и создавать незабываемые 
+                            моменты. Мы – не просто продавцы цветов, мы – кураторы чувств, воплощенных в изысканных букетах и авторских 
+                            композициях. Наша концепция проста, но глубока: сделать дарение цветов легким, приятным и осмысленным.
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="flowers2.png" alt="Описание изображения 2" class="photo">
+                        <p class="text">
+                            <b>Свежесть и качество, гарантированные природой.</b> Мы работаем напрямую с проверенными поставщиками и 
+                            фермерами, чтобы каждый цветок в вашем букете был безупречным и радовал своей красотой как можно дольше.
+                            <br><br><b>Индивидуальный подход к каждому клиенту.</b> Мы понимаем, что каждый случай уникален, поэтому
+                            предлагаем широкий выбор букетов на любой вкус и бюджет. Наши флористы с удовольствием помогут вам подобрать 
+                            идеальную композицию, отражающую ваши чувства и пожелания.
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="flowers3.png" alt="Описание изображения 3" class="photo">
+                        <p class="text">
+                            <b>Удобство и скорость заказа.</b> Забудьте о утомительных походах по цветочным магазинам! С Flora вы можете 
+                            заказать букет, не выходя из дома или офиса, всего в несколько кликов. Мы предлагаем удобные способы оплаты и 
+                            оперативную доставку по городу.
+                            <br><br><b>Больше, чем просто букет.</b> Мы верим, что цветы – это лишь часть подарка. Поэтому предлагаем 
+                            широкий выбор дополнений: милые открытки с вашими теплыми словами, вкусные шоколадные конфеты, мягкие игрушки 
+                            и многое другое.
+                            <br><br><b>Вдохновение в каждом лепестке.</b> Наша команда постоянно следит за последними тенденциями в 
+                            флористике и создает уникальные авторские композиции, которые не оставят равнодушным даже самого искушенного 
+                            ценителя прекрасного.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="deviz">
+        Flora – это ваш надежный помощник в выражении чувств. Мы поможем вам поздравить близкого человека с днем рождения, 
+        выразить благодарность, признаться в любви или просто поднять настроение.
+        <br><br><i>Выбирайте Flora – выбирайте эмоции, воплощенные в цветах!</i>
+    </div>
+    <footer>
+        <div class="contact">
+            <div class="icons">
+                <img src="Telegram_icon.png" style="cursor: pointer;" alt="Telegram" class="telegram-icon">
+                <img src="WhatsApp_icon.png" style="cursor: pointer;" alt="WhatsApp" class="whatsapp-icon">
+                <img src="VK_icon.png" style="cursor: pointer;" alt="VK" class="vk-icon">
+            </div>
+            <div class="number">
+                <br><a href="#">+7-812-111-11-11</a>
+                <br><a href="#">florashopspb@mail.ru</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.querySelector('.sidebar');
+    document.addEventListener('click', function(event) {
+        if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+            sidebarToggle.checked = false;
+        }
+    });
+</script>
+</html>
